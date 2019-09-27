@@ -13,7 +13,7 @@ class Stack():
         self.data.append(item)
         self.length += 1
     
-    def pop(self, item):
+    def pop(self):
         if self.is_empty():
             raise RuntimeError("Stack is empty")
         self.length -= 1
@@ -22,7 +22,7 @@ class Stack():
     def peek(self):
         if self.is_empty():
             raise RuntimeError("Stack is empty")
-        return self.data[0]
+        return self.data[self.length - 1]
     
     def __repr__(self):
         return self.__str__()
