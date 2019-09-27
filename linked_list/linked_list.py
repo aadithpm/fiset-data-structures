@@ -92,7 +92,7 @@ class DoublyLinkedList:
         
         return data
     
-    def remove(self, node: Node):
+    def remove(self, node):
         if node.prev is None:
             return self.remove_first()
         
