@@ -75,4 +75,4 @@ class DoublyLinkedListTest(unittest.TestCase):
         self.assertFalse(self.ll.contains(99))
     
     def test_str_reprsentation(self):
-        self.assertEquals('[10, 5, 15]', str(self.ll))
+        self.assertEqual('[10, 5, 15]', str(self.ll))
