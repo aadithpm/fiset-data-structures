@@ -1,10 +1,10 @@
-from queue.queue import ListQueue
+from queue.list_queue import Queue
 import unittest
 
 class QueueTest(unittest.TestCase):
 
     def setUp(self):
-        self.queue = ListQueue()
+        self.queue = Queue()
         self.queue.enqueue(5)
         self.queue.enqueue(10)
         self.queue.enqueue(15)
@@ -20,7 +20,7 @@ class QueueTest(unittest.TestCase):
         self.assertEqual(self.queue.dequeue(), top_elem)
 
     def test_cannot_deq_peek_empty_queue(self):
-        empty_queue = ListQueue()
+        empty_queue = Queue()
 
         self.assertRaises(RuntimeError, lambda: empty_queue.dequeue())
         self.assertRaises(RuntimeError, lambda: empty_queue.peek())
