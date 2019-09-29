@@ -1,4 +1,4 @@
-from queue.list_queue import Queue
+from queue import Queue
 import unittest
 
 class QueueTest(unittest.TestCase):
