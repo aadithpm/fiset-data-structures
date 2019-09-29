@@ -24,6 +24,11 @@ class Queue():
             raise RuntimeError("Queue is empty")
         return self.data[self.length - 1]
     
+    def last(self):
+        if self.is_empty():
+            raise RuntimeError("Queue is empty")
+        return self.data[0]
+
     def __repr__(self):
         return self.__str__()
     
