@@ -1,4 +1,4 @@
-from linked_list import DoublyLinkedList
+from .linked_list import DoublyLinkedList
 import unittest
 
 class DoublyLinkedListTest(unittest.TestCase):
