@@ -1,6 +1,7 @@
 from .linked_list import DoublyLinkedList
 import unittest
 
+
 class DoublyLinkedListTest(unittest.TestCase):
 
     def setUp(self):
@@ -8,7 +9,7 @@ class DoublyLinkedListTest(unittest.TestCase):
         self.ll.add(10)
         self.ll.add(5)
         self.ll.add(15)
-    
+
     def test_head_and_tail(self):
         self.assertEqual(None, self.ll.head.prev)
         self.assertEqual(None, self.ll.tail.next)
@@ -44,28 +45,28 @@ class DoublyLinkedListTest(unittest.TestCase):
         ll_new.add(25)
 
         self.assertEqual(ll_new.head, ll_new.tail)
-    
+
     def test_peek_first_and_last(self):
         peeked_first = self.ll.peek_first()
         peeked_last = self.ll.peek_last()
 
         self.assertEqual(peeked_first, self.ll.head)
         self.assertEqual(peeked_last, self.ll.tail)
-    
+
     def test_removing_head(self):
         new_head = self.ll.head.next
 
         self.ll.remove_at(0)
-        
+
         self.assertEqual(new_head, self.ll.head)
-    
+
     def test_removing_tail(self):
         new_tail = self.ll.tail.prev
 
         self.ll.remove_at(self.ll.size() - 1)
 
         self.assertEqual(new_tail, self.ll.tail)
-    
+
     def test_remove_value(self):
         self.assertTrue(self.ll.remove_val(10))
         self.assertFalse(self.ll.remove_val(99))
@@ -73,6 +74,6 @@ class DoublyLinkedListTest(unittest.TestCase):
     def test_contains(self):
         self.assertTrue(self.ll.contains(10))
         self.assertFalse(self.ll.contains(99))
-    
+
     def test_str_reprsentation(self):
         self.assertEqual('[10, 5, 15]', str(self.ll))

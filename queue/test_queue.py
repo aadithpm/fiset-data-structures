@@ -1,6 +1,7 @@
 from .queue import Queue
 import unittest
 
+
 class QueueTest(unittest.TestCase):
 
     def setUp(self):
