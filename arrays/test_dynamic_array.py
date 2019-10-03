@@ -32,7 +32,7 @@ class DynamicArrayTest(unittest.TestCase):
         self.arr.add(6)
 
         self.assertEqual(2, self.arr.size())
-    
+
     def test_clear_array(self):
         self.arr.add(10)
         self.arr.add(5)
@@ -76,7 +76,7 @@ class DynamicArrayTest(unittest.TestCase):
         self.arr.add(10)
 
         self.assertEqual(0, self.arr.index_of(10))
-    
+
     def test_contains(self):
         self.arr.add(5)
 
