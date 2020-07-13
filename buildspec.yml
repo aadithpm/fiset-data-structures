@@ -3,7 +3,9 @@ version: 0.2
 phase:
         pre_build:
                 commands:
+                        - echo 'Installing requirements..'
                         - pip install -r requirements.txt
+                        - echo 'Running tests on $CODEBUILD_SOURCE_VERSION..'
         build:
                 commands:
                         - echo 'Running tests..'
