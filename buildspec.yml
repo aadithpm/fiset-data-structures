@@ -1,4 +1,4 @@
-version: 0.1
+version: 0.2
 
 phase:
         pre_build:
@@ -11,5 +11,3 @@ phase:
         artifacts:
                 files:
                         - '**/*'
-                base-directory: .
-
