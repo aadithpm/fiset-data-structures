@@ -1,0 +1,15 @@
+version: 0.1
+
+phase:
+        pre_build:
+                commands:
+                        - pip install -r requirements.txt
+        build:
+                commands:
+                        - nosetests
+                        - flake8 --config=tox.ini
+        artifacts:
+                files:
+                        - '**/*'
+                base-directory: .
+
