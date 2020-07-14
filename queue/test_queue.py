@@ -33,6 +33,4 @@ class QueueTest(unittest.TestCase):
         self.queue.dequeue()
 
         self.assertEqual(length, self.queue.size())
-    
-    def test_failing(self):
-        self.assertTrue(False)
+ 
